@@ -1,27 +1,11 @@
 import streamlit as st
 import joblib
 
-model = joblib.load("multilinear_regression_house_price.pkl")
-
+model=joblib.load("multilinear_regression_house_price.pkl")
 st.title("House Price Prediction")
-
-area = st.number_input(
-    "Enter Area:",
-    min_value=0.0,
-    value=600.0
-)
-
-bedrooms = st.number_input(
-    "Enter no of bedrooms:",
-    min_value=0,
-    value=3
-)
-
-floors = st.number_input(
-    "Enter no of floors:",
-    min_value=0,
-    value=1
-)
+area=st.number_input("Enter Area:",value=600.0)
+bedrooms=st.number_input("Enter no of bedrooms:", value=3)
+floors=st.number_input("Enter no of floors:", value=1)
 
 result = st.empty()
 
