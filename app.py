@@ -7,22 +7,19 @@ st.title("House Price Prediction")
 
 area = st.number_input(
     "Enter Area:",
-    min_value=600.0,
-    max_value=3000.0,
+    min_value=0.0,
     value=600.0
 )
 
 bedrooms = st.number_input(
     "Enter no of bedrooms:",
-    min_value=1,
-    max_value=4,
+    min_value=0,
     value=3
 )
 
 floors = st.number_input(
     "Enter no of floors:",
     min_value=0,
-    max_value=10,
     value=1
 )
 
