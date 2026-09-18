@@ -44,7 +44,7 @@ demo = gr.Interface(
             minimum=0,
             maximum=10,
             value=3
-        )
+        ),
         gr.Number(
             label="Enter number of floors",
             minimum=0,
