@@ -4,7 +4,7 @@ import pandas as pd
 import os
 
 # Load model
-model = joblib.load("logistic_regression_studyhours_model.pkl")
+model = joblib.load("multilinear_regression_house_price.pkl")
 
 
 def predict_result(area, bedrooms, floors):
@@ -35,23 +35,29 @@ demo = gr.Interface(
         gr.Number(
             label="Enter Area",
             minimum=300,
-            maximum=,
-            value=5
+            maximum=3000,
+            value=300
         ),
 
         gr.Number(
-            label="Enter Attendance (%)",
+            label="Enter number of bedrooms",
             minimum=0,
-            maximum=100,
-            value=75
+            maximum=10,
+            value=3
+        )
+        gr.Number(
+            label="Enter number of floors",
+            minimum=0,
+            maximum=10,
+            value=3
         )
     ],
 
     outputs=gr.Textbox(label="Prediction"),
 
-    title="Student Result Prediction",
+    title="House price Prediction",
 
-    description="Predict Pass or Fail based on Study Hours and Attendance."
+    description="Predict House Price based on Area, Bedrooms, and Floors"
 )
 
 
