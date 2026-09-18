@@ -29,14 +29,14 @@ demo = gr.Interface(
             label="Enter Area",
             minimum=300,
             maximum=3000,
-            value=300
+            value=3000
         ),
 
         gr.Number(
             label="Enter number of bedrooms",
             minimum=0,
             maximum=10,
-            value=3
+            value=7
         ),
         gr.Number(
             label="Enter number of floors",
